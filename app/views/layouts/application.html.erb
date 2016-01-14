@@ -1,26 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Storeapp</title>
+  <title>Tom's Growshop</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!-- Main Navbar starts here -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="..."> <!-- need source image still-->
+        </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Placeholder 1</a></li>
+            <li><a href="#">Placeholder 2</a></li>
+            <li><a href="#">Placeholder 3</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Navbar end -->
+  <%= yield %>
 
-<nav>
-  <ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
-</nav>
-
-<%= yield %>
-
-<footer>
-  &copy; 2016 TGD
-</footer>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">&copy; Tom's Growshop by TGD - All rights reserved - 2016</p>
+    </div>
+  </footer>
 
 </body>
 </html>
