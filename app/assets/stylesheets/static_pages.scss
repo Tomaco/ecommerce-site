@@ -4,9 +4,74 @@
 
 //Google fonts
 @import url(https://fonts.googleapis.com/css?family=Rammetto+One);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa);
+
+//Variables
+$font-headings: 'Rammetto One', Helvetica, sans-serif;
+$font-stack: 'Comfortaa', Helvetica, sans-serif;
+
+body {
+	padding-top: 65px;
+	background-color: #f3ffbd;
+}
+
+/*** Navbar Style ***/
+
+.navbar-fixed-top {
+	background-color: #2ecc71;
+	border-color: #27ae60;
+}
+
+.navbar-fixed-top .navbar-nav > li > a {
+	font-family: $font-stack;
+	color: white;
+	letter-spacing: 0.5px;
+}
+
+.navbar-brand {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.navbar-fixed-top .navbar-brand:hover,
+.navbar-fixed-top .navbar-brand:focus {
+	background-color: transparent;
+}
+
+.navbar-fixed-top .navbar-nav > li > a:hover,
+.navbar-fixed-top .navbar-nav > li > a:focus {
+  background-color: #27ae60;
+}
+
+.navbar-fixed-top .navbar-toggle .icon-bar {
+  background-color: #ff1654;
+ }
+
+/*** END Navbar Style ***/
 
 h1 {
-	font-family: 'Rammetto One', sans-serif;
+	font-family: $font-headings;
 	text-align: center;
-	color: red;
+	color: #ff1654;
+}
+
+footer {
+	background-color: #2ecc71;
+	border-color: #27ae60;
+}
+
+footer p {
+	font-family: $font-stack;
+}
+
+.carousel-caption {
+	font-family: $font-headings;
+}
+
+.carousel-control:hover {
+	background-color: transparent;
+}
+
+#img-frontpage {
+	margin: auto;
 }
