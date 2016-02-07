@@ -15,3 +15,12 @@ h2 {
 h4 {
 	font-family: $font-headings;
 }
+
+.new_product, .edit_product {
+	padding-left: 50px;
+}
+
+label {
+	font-family: $font-stack;
+	font-weight: 400;
+}
