@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :products
+
   get 'about/' => 'static_pages#about'
 
   get 'contact/' => 'static_pages#contact'
@@ -7,6 +8,8 @@ Rails.application.routes.draw do
   get 'index/' => 'static_pages#index'
 
   get 'featured/' => 'static_pages#landing_page'
+
+  post 'contact/thank_you' => 'static_pages#thank_you'
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
