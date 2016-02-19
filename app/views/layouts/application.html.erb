@@ -10,9 +10,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <!-- Devise flash messages below -->
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <!-- Flash messages below -->
+  <% if notice %>
+    <p class="alert alert-info" role="alert"><%= notice %></p>
+  <% end %>
+
+  <% if alert %>
+    <p class="alert alert-danger" role="alert"><%= alert %></p>
+  <% end %>
+
+  <script>$(".alert").delay(3000).fadeOut();</script>
 
   <!-- Main Navbar starts here -->
   <nav class="navbar navbar-fixed-top" role="navigation">
