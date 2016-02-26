@@ -4,10 +4,17 @@
   <div class="row">
     <div class="col-sm-12 col-md-4 col-lg-4">
       <%= image_tag(@product.image_url, class: "img-responsive") %>
+
+      <%= render "new_comment" %>
+      
+      <%= render "comments" %>
+      
     </div>
 
     <div class="col-sm-12 col-md-8 col-lg-8">
       <h2><%= @product.name %></h2>
+
+      <p><strong><i>Average Rating: </i></strong><div class="rated" data-score="<%= @product.avg_rating %>"></div></p>
 
       <p><strong><%= @product.description %></strong></p>
 
