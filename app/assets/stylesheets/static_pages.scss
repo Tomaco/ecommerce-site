@@ -2,77 +2,100 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//Google fonts
-@import url(https://fonts.googleapis.com/css?family=Rammetto+One);
-@import url(https://fonts.googleapis.com/css?family=Comfortaa);
-
-//Variables
-$font-headings: 'Rammetto One', Helvetica, sans-serif;
-$font-stack: 'Comfortaa', Helvetica, sans-serif;
+@import "base";
 
 body {
-	padding-top: 65px;
-	background-color: #f3ffbd;
+  padding-top: 65px;
+  background-color: #f3ffbd;
 }
 
 /*** Navbar Style ***/
 
 .navbar-fixed-top {
-	background-color: #2ecc71;
-	border-color: #27ae60;
+  background-color: #2ecc71;
+  border-color: #27ae60;
 }
 
 .navbar-fixed-top .navbar-nav > li > a {
-	font-family: $font-stack;
-	color: white;
-	letter-spacing: 0.5px;
-	font-weight: 600;
+  font-family: $font-stack;
+  color: white;
+  letter-spacing: 0.5px;
+  font-weight: 600;
 }
 
 .navbar-brand {
-	padding-top: 0;
-	padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.navbar-fixed-top .navbar-brand:hover,
-.navbar-fixed-top .navbar-brand:focus {
-	background-color: transparent;
+.navbar-fixed-top .navbar-brand {
+  &:hover {
+    background-color: transparent;
+  }
 }
 
-.navbar-fixed-top .navbar-nav > li > a:hover,
-.navbar-fixed-top .navbar-nav > li > a:focus {
-  background-color: #27ae60;
+.navbar-fixed-top .navbar-nav > li > a {
+  &:hover, &:focus {
+    background-color: #27ae60;
+  }
 }
 
 .navbar-fixed-top .navbar-toggle .icon-bar {
   background-color: #ff1654;
  }
 
+.dropdown-menu > li > a {
+  color: white;
+  background-color: #27ae60;
+  &:hover {
+    color: white;
+    background-color: #72dfa0;
+  }
+}
+
+.btn-default {
+  color: #ff1654;
+  background-color: #72dfa0;
+  &:hover {
+    color: #ff1654;
+    background-color: #0af06c;
+  }
+}
+
 /*** END Navbar Style ***/
 
 h1 {
-	font-family: $font-headings;
-	text-align: center;
-	color: #ff1654;
+  font-family: $font-headings;
+  text-align: center;
+  color: #ff1654;
 }
 
 footer {
-	background-color: #2ecc71;
-	border-color: #27ae60;
+  background-color: #2ecc71;
+  border-color: #27ae60;
 }
 
 footer p {
-	font-family: $font-stack;
+  font-family: $font-stack;
 }
 
 .carousel-caption {
-	font-family: $font-headings;
+  font-family: $font-headings;
 }
 
 .carousel-control:hover {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 #img-frontpage {
-	margin: auto;
+  margin: auto;
 }
+
+
+/*** Contact Page Style ***/
+
+.contact-form {
+  padding: 45px 15px;
+}
+
+/*** END Contact Page Style ***/
