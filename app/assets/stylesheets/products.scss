@@ -2,9 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//Variables
-$font-headings: 'Rammetto One', Helvetica, sans-serif;
-$font-stack: 'Comfortaa', Helvetica, sans-serif;
+@import "base";
 
 h2 {
   font-family: $font-headings;
