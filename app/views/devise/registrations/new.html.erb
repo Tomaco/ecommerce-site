@@ -1,16 +1,31 @@
-<h2>Please Register Your Account</h2>
+<h2 class="new_user_heading">Please Register Your Account</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="form-group">
+    <%= f.label :username, class: "sr-only" %>
+    <%= f.email_field :username, autofocus: true, class: "form-control", placeholder: "Pick a Username" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :first_name, class: "sr-only" %>
+    <%= f.email_field :first_name, autofocus: true, class: "form-control", placeholder: "First Name" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :last_name, class: "sr-only" %>
+    <%= f.email_field :last_name, autofocus: true, class: "form-control", placeholder: "Last Name" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :email, class: "sr-only" %>
-    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email Address" %>
+    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Your Email Address" %>
   </div>
 
   <div class="form-group">
     <%= f.label :password, class: "sr-only" %>
-    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
+    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Create a Password" %>
     <span id="helpBlock" class="help-block">8 characters minimum</span>
   </div>
 
@@ -20,7 +35,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Register Account", class: "btn btn-primary" %>
+    <%= f.submit "Register Account", class: "btn btn-success btn-block" %>
   </div>
 <% end %>
 
