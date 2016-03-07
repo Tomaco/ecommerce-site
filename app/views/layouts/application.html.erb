@@ -38,23 +38,21 @@
         <ul class="nav navbar-nav">
           <li>
             <% if user_signed_in? %>
-              <%= link_to("Logout", destroy_user_session_path, :method => :delete) %>
-                <span class="glyphicon glyphicon-log-out"></span>
+              <%= "Hi #{current_user.username}" %>
+              <%= link_to('<span class="glyphicon glyphicon-log-out"></span> Logout'.html_safe, destroy_user_session_path, :method => :delete) %>
             <% else %>
-              <%= link_to("Login", new_user_session_path) %>
-                <span class="glyphicon glyphicon-log-in"></span>
+              <%= link_to('<span class="glyphicon glyphicon-log-in"></span> Login'.html_safe, new_user_session_path) %>
               <li>
-                <%= link_to("Register", new_user_registration_path) %>
-                  <span class="glyphicon glyphicon-user"></span>
+                <%= link_to('<span class="glyphicon glyphicon-user"></span> Register'.html_safe, new_user_registration_path) %>
               </li>
             <% end %>
           </li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Placeholder 1</a></li>
-              <li><a href="#">Placeholder 2</a></li>
-              <li><a href="#">Placeholder 3</a></li>
+              <li><%= link_to "Category", products_path %></li>
+              <li><%= link_to "Category", products_path %></li>
+              <li><%= link_to "Category", products_path %></li>
             </ul>
           </li>
           <li>
