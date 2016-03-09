@@ -6,7 +6,9 @@ describe Product do
     before do
       @product = Product.create!(name: "containers")
       @user = User.create!(email: "johng@gmail.com", password: "fake1234")
-      @comments = @product.comments.create!(rating: 1, user: @user, body: "Awful container!"), @product.comments.create!(rating: 3, user: @user, body: "Average container!"), @product.comments.create!(rating: 5, user: @user, body: "Great container!")
+      @comments = @product.comments.create!(rating: 1, user: @user, body: "Awful container!"), 
+                  @product.comments.create!(rating: 3, user: @user, body: "Average container!"), 
+                  @product.comments.create!(rating: 5, user: @user, body: "Great container!")
     end
 
     it "returns the average rating of all comments" do
@@ -19,7 +21,7 @@ describe Product do
       @product = Product.new(description: "Containers of all sizes")
     end
 
-    it "is not valid" do
+    it "is not valid when required product data is missing" do
       expect(@product).not_to be_valid
     end
   end
