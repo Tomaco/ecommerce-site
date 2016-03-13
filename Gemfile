@@ -20,8 +20,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-# Factory Girl
-gem 'factory_girl_rails'
 
 
 # Use ActiveModel has_secure_password
@@ -41,6 +39,9 @@ group :development, :test do
   gem 'sqlite3'
 
   gem 'rspec-rails', '~> 3.0'
+
+  # Factory Girl
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :development do
