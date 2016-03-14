@@ -57,6 +57,9 @@ group :development do
 
   # Spork
   gem 'spork-rails'
+
+  # Connecting Guard & Spork
+  gem 'guard-spork'
 end
 
 group :production do
