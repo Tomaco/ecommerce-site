@@ -1,5 +1,5 @@
 class PaymentsController < ApplicationController
-  before_filer :authenticate_user!
+  before_filter :authenticate_user!
 
   def create
     @product = Product.find(params[:product_id])
