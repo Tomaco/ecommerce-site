@@ -4,4 +4,7 @@ $(document).on('ready page:load', function(){
   $('.rated').raty( { path: '../assets/raty', readOnly: 'true', score: function(){
     return $(this).attr('data-score');}
   });
+
+  // Zoom Plugin
+  $('.img-zoom').elevateZoom();
 });
