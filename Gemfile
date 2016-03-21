@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 ruby "2.2.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '4.2.6'
+gem 'rails-html-sanitizer', '~> 1.0', '>= 1.0.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -78,3 +79,6 @@ gem 'will_paginate', '~> 3.0.6'
 
 # Stripe card payments
 gem 'stripe'
+
+#Brakeman
+gem 'brakeman', :require => false
