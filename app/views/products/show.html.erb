@@ -3,7 +3,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 col-md-4 col-lg-4">
-      <%= image_tag(@product.image_url, class: "img-responsive") %>
+      <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "product.image_url") %>
 
       <%= render "new_comment" %>
       
