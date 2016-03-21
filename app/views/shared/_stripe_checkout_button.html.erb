@@ -4,5 +4,5 @@
   data-image="/square-image.png"
   data-name="<%= @product.name %>"
   data-description="Subtotal (<%= number_to_currency(@product.price) %>)"
-  data-amount="Pay <%= number_to_currency(@product.price / 100) %>">
+  data-amount="Pay <%= number_to_currency(@product.price * 100) %>">
 </script>
