@@ -82,3 +82,6 @@ gem 'stripe'
 
 #Brakeman
 gem 'brakeman', :require => false
+
+#AngulasJS
+gem 'angularjs-rails'
