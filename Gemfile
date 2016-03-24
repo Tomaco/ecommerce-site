@@ -88,3 +88,9 @@ gem 'angularjs-rails'
 
 #Dalli
 gem 'dalli'
+
+#Redis
+gem 'redis-rails'
+
+#New Relic agent
+gem 'newrelic_rpm'
