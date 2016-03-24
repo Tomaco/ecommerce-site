@@ -13,6 +13,7 @@
     </div>
 
     <div class="col-sm-12 col-md-8 col-lg-8">
+    <% cache @product do %>
       <h2><%= @product.name %></h2>
 
       <p><strong><i>Average Rating: </i></strong><div class="rated" data-score="<%= @product.avg_rating %>"></div></p>
@@ -28,7 +29,7 @@
         <strong>Price:</strong>
         <%= @product.price %>
       </p>
-
+    <% end %>
       <!-- Stripe payment render -->
       <%= form_tag "/payments/create" do %>
         <%= hidden_field_tag(:product_id, @product.id) %>
