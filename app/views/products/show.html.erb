@@ -13,7 +13,6 @@
     </div>
 
     <div class="col-sm-12 col-md-8 col-lg-8">
-    <% cache @product do %>
       <h2><%= @product.name %></h2>
 
       <p><strong><i>Average Rating: </i></strong><div class="rated" data-score="<%= @product.avg_rating %>"></div></p>
@@ -27,16 +26,17 @@
 
       <p>
         <strong>Price:</strong>
-        <%= @product.price %>
+        <%= number_to_currency @product.price %>
       </p>
-    <% end %>
       <!-- Stripe payment render -->
       <%= form_tag "/payments/create" do %>
         <%= hidden_field_tag(:product_id, @product.id) %>
         <%= render partial: "shared/stripe_checkout_button" %>
       <% end %>
 
-      <%= link_to 'Edit', edit_product_path(@product) %> |
+      <% if signed_in? && current_user.admin? %>
+        <%= link_to 'Edit', edit_product_path(@product) %> |
+      <% end %>
       <%= link_to 'Back', products_path %>
     </div>
   </div>
